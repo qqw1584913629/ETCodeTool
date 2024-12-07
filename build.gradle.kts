@@ -8,16 +8,37 @@ group = "com.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
+    // 阿里云镜像
+    maven { url = uri("https://maven.aliyun.com/repository/public") }
+    maven { url = uri("https://maven.aliyun.com/repository/central") }
+    maven { url = uri("https://maven.aliyun.com/repository/google") }
+    maven { url = uri("https://maven.aliyun.com/repository/jcenter") }
+    
+    // 华为云镜像
+    maven { url = uri("https://repo.huaweicloud.com/repository/maven") }
+    
+    // 原始仓库作为备份
     mavenCentral()
+    maven { url = uri("https://packages.jetbrains.team/maven/p/ij/intellij-dependencies") }
+    maven { url = uri("https://cache-redirector.jetbrains.com/intellij-repository/releases") }
+    maven { url = uri("https://cache-redirector.jetbrains.com/intellij-dependencies") }
 }
 
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2023.2.8")
-    type.set("IC") // Target IDE Platform
+    type.set("RD") // Rider IDE
+    version.set("2023.3.3")
+    
+    // 移除 plugins 配置
+    plugins.set(listOf())
+}
 
-    plugins.set(listOf(/* Plugin Dependencies */))
+dependencies {
+    // 使用对应版本的依赖
+    implementation("com.jetbrains.rd:rd-core:2023.3.3")
+    implementation("com.jetbrains.rd:rd-framework:2023.3.3")
+    implementation("com.jetbrains.rd:rd-swing:2023.3.3")
 }
 
 tasks {
@@ -31,8 +52,10 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("232")
-        untilBuild.set("242.*")
+        // 支持从较早版本开始
+        sinceBuild.set("221") // 对应 2022.1
+        // 不设置 untilBuild，这样就可以支持所有更新的版本
+        untilBuild.set("")
     }
 
     signPlugin {

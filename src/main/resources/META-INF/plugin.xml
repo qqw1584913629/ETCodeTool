@@ -22,9 +22,21 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
+    <!-- 添加 Rider 平台依赖 -->
+    <depends>com.intellij.modules.rider</depends>
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+
+    <actions>
+        <!-- 添加到 "New" 组，也就是右键菜单的 "New" 子菜单中 -->
+        <action id="com.example.demo.GenerateText"
+                class="com.example.demo.actions.GenerateTextAction"
+                text="Generate ET Code"
+                description="Generate custom et code">
+            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewClass"/>
+        </action>
+    </actions>
 </idea-plugin>
