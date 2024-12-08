@@ -16,6 +16,7 @@ import java.awt.BorderLayout
 import java.awt.FlowLayout
 import java.awt.Dimension
 import com.intellij.openapi.fileEditor.FileEditorManager
+import com.intellij.psi.PsiDirectory
 
 class GenerateTextAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
@@ -378,12 +379,18 @@ class GenerateTextAction : AnAction() {
             
             // 获取当前文件所在的目录
             val virtualFile = e.getData(CommonDataKeys.VIRTUAL_FILE)
-            val directory = virtualFile?.parent
+            
+            // 判断是否选中的是目录
+            val targetDirectory = if (virtualFile?.isDirectory == true) {
+                virtualFile
+            } else {
+                virtualFile?.parent
+            }
             
             // 在目录中创建新文件
-            if (directory != null) {
+            if (targetDirectory != null) {
                 WriteCommandAction.runWriteCommandAction(project) {
-                    val psiDirectory = PsiManager.getInstance(project).findDirectory(directory)
+                    val psiDirectory = PsiManager.getInstance(project).findDirectory(targetDirectory)
                     val newFile = psiDirectory?.add(file)
                     
                     // 打开新创建的文件

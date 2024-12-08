@@ -1,3 +1,5 @@
+[English](README-EN.md)
+
 ET框架8.1代码生成工具
 
 ## 功能特点
