@@ -1,21 +1,45 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.example.demo</id>
+    <id>com.ET8.ETCode</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Demo</name>
+    <name>ETCodeTool</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">Michelle</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    ET框架代码生成工具<br>
+    <em>功能特点：</em>
+    <ul>
+        <li>支持生成 Entity、Component、System 和 Handler 代码</li>
+        <li>支持自动添加常用接口实现</li>
+        <li>支持 Server、Client 和 Share 命名空间</li>
+        <li>支持消息处理器代码生成</li>
+        <li>提供友好的图形界面配置</li>
+    </ul>
+    <br>
+    <em>PS:</em>
+    <ul>
+        <li>Entity 类不会自动添加后缀</li>
+        <li>Component 类会自动添加 Component 后缀</li>
+        <li>System 类会自动添加 System 后缀</li>
+        <li>Handler 类会自动添加 Handler 后缀</li>
+        <li>Handler 类命名需遵循 X2Y_ZZZ 格式，否则需要手动填写泛型</li>
+    </ul>
+    <br>
+    <em>使用方法：</em>
+    <ul>
+        <li>右键点击项目文件夹</li>
+        <li>选择 New -> ET Code</li>
+        <li>在弹出的对话框中配置相关选项</li>
+        <li>点击确定生成代码</li>
+    </ul>
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -30,13 +54,18 @@
 
     </extensions>
 
+    <!-- 插件图标配置 -->
+    <icon src="/icons/pluginIcon.png"/>  <!-- 这是插件在 IDE 设置中显示的图标 -->
+
     <actions>
         <!-- 添加到 "New" 组，也就是右键菜单的 "New" 子菜单中 -->
         <action id="com.example.demo.GenerateText"
                 class="com.example.demo.actions.GenerateTextAction"
-                text="Generate ET Code"
-                description="Generate custom et code">
-            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewClass"/>
+                text="ET Code"
+                description="Generate custom et code"
+                icon="/icons/csharp.png"
+                use-small-icons="true">
+            <add-to-group group-id="NewGroup" anchor="first" relative-to-action="NewClass"/>
         </action>
     </actions>
 </idea-plugin>
