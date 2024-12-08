@@ -1,3 +1,5 @@
+[中文](README.md)
+
 ET Framework 8.1 Code Generation Tool
 
 ## Features
@@ -23,4 +25,4 @@ ET Framework 8.1 Code Generation Tool
 3. Configure options in the popup dialog
 4. Click OK to generate code
 
-For any issues, please submit an Issue 
+For any issues, please submit an Issue
