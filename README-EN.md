@@ -1,28 +1,54 @@
-[中文](README.md)
+# 🚀 ET Framework 8.1 Code Generator
 
-ET Framework 8.1 Code Generation Tool
+[![Version](https://img.shields.io/badge/Version-8.1-blue.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 
-## Features
+English | [简体中文](README.md)
 
-- Supports generation of Entity, Component, System and Handler code
-- Supports automatic implementation of common interfaces
-- Supports Server, Client and Share namespaces
-- Supports message handler code generation
-- Provides user-friendly GUI configuration
+## ✨ Features
 
-## Important Notes
+🔸 Generate Entity, Component, System and Handler code  
+🔸 Auto-implement common interfaces  
+🔸 Support Server, Client and Share namespaces  
+🔸 Support message handler code generation  
+🔸 User-friendly GUI configuration
 
-- Entity classes will not automatically add suffix
-- Component classes will automatically add "Component" suffix
-- System classes will automatically add "System" suffix
-- Handler classes will automatically add "Handler" suffix
-- Handler class names should follow X2Y_ZZZ format, otherwise generic types need to be filled manually
+## 📥 Installation
 
-## Usage
+> Just a few simple steps to complete installation
 
-1. Right-click on project folder
+1️⃣ Download plugin file (.zip)  
+2️⃣ Open IDE plugin settings (File -> Settings -> Plugins)  
+3️⃣ Click gear icon, select "Install Plugin from Disk"  
+4️⃣ Select downloaded plugin file to install  
+5️⃣ Restart IDE to complete installation
+
+## ⚠️ Notes
+
+| Type | Description |
+|------|-------------|
+| Entity | No suffix added automatically |
+| Component | "Component" suffix added automatically |
+| System | "System" suffix added automatically |
+| Handler | "Handler" suffix added automatically |
+
+> 💡 Handler class names must follow X2Y_ZZZ format, otherwise generics need to be filled manually
+
+## 🔨 Usage
+
+<details>
+<summary>Expand to view detailed steps</summary>
+
+1. Right click on project folder
 2. Select New -> ET Code
 3. Configure options in the popup dialog
 4. Click OK to generate code
 
-For any issues, please submit an Issue
+</details>
+
+## 🤝 Support
+
+If you have any issues, please [create an Issue](../../issues) 📮
+
+---
+*Make code generation simpler, development more efficient!*
