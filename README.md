@@ -42,6 +42,9 @@
 1. 右键点击项目文件夹
 2. 选择 New -> ET Code
 3. 在弹出的对话框中配置相关选项
+   <p align="center"><img src="images/ETCodeCreateEntity.png" alt="创建实体"></p>
+   <p align="center"><img src="images/ETCodeCreateSystem.png" alt="创建实体System"></p>
+   <p align="center"><img src="images/ETCodeCreateHandler.png" alt="创建消息处理类"></p>
 4. 点击确定生成代码
 
 </details>

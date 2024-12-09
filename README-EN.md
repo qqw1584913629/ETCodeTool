@@ -42,6 +42,9 @@ English | [简体中文](README.md)
 1. Right click on project folder
 2. Select New -> ET Code
 3. Configure options in the popup dialog
+   <p align="center"><img src="images/ETCodeCreateEntity.png" alt="CreateEntity"></p>
+   <p align="center"><img src="images/ETCodeCreateSystem.png" alt="CreateSystem"></p>
+   <p align="center"><img src="images/ETCodeCreateHandler.png" alt="CreateHandler"></p>
 4. Click OK to generate code
 
 </details>
