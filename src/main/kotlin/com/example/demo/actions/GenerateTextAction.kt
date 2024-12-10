@@ -99,6 +99,7 @@ class GenerateTextAction : AnAction() {
                 serverRadio.isSelected = true
                 entityRadio.isSelected = true
                 childOfRadio.isSelected = true
+                messageHandlerRadio.isSelected = true
                 
                 // 默认选中IAwake和IDestroy
                 iAwakeCheckBox.isSelected = true
@@ -168,6 +169,11 @@ class GenerateTextAction : AnAction() {
                 messageHandlerRadio.addActionListener(radioListener)
                 messageSessionHandlerRadio.addActionListener(radioListener)
                 messageLocationHandlerRadio.addActionListener(radioListener)
+                
+                // 设置名称输入框为默认焦点
+                SwingUtilities.invokeLater {
+                    nameTextField.requestFocusInWindow()
+                }
             }
             
             private fun updateDialogSize() {
@@ -361,7 +367,6 @@ class GenerateTextAction : AnAction() {
                     // System类型
                     appendLine("    [EntitySystemOf(typeof($name))]")
                     appendLine("    public static partial class ${name}System")
-                    appendLine()
                     appendLine("    \u007B")
                     appendLine("        ")
                     appendLine("    \u007D")
