@@ -53,12 +53,12 @@ class GenerateTextAction : AnAction() {
             // 添加接口复选框
             val iAwakeCheckBox = JCheckBox("IAwake")
             val iUpdateCheckBox = JCheckBox("IUpdate")
-            val iLateUpdateCheckBox = JCheckBox("ILateUpdateSystem")
+            val iLateUpdateCheckBox = JCheckBox("ILateUpdate")
             val iDestroyCheckBox = JCheckBox("IDestroy")
             val iGetComponentSysCheckBox = JCheckBox("IGetComponentSys")
             val iSerializeCheckBox = JCheckBox("ISerialize")
             val iDeserializeCheckBox = JCheckBox("IDeserialize")
-            
+            val iSerializeToEntityCheckBox = JCheckBox("ISerializeToEntity")
             // 接口选择面板
             private val interfacePanel = JPanel(GridLayout(3, 3, 5, 5))
             
@@ -232,6 +232,7 @@ class GenerateTextAction : AnAction() {
                 interfacePanel.add(iGetComponentSysCheckBox)
                 interfacePanel.add(iSerializeCheckBox)
                 interfacePanel.add(iDeserializeCheckBox)
+                interfacePanel.add(iSerializeToEntityCheckBox)
                 mainPanel.add(interfacePanel)
                 
                 val inputPanel = JPanel(FlowLayout(FlowLayout.LEFT))
@@ -294,11 +295,12 @@ class GenerateTextAction : AnAction() {
                     val interfaces = mutableListOf<String>()
                     if (dialog.iAwakeCheckBox.isSelected) interfaces.add("IAwake")
                     if (dialog.iUpdateCheckBox.isSelected) interfaces.add("IUpdate")
-                    if (dialog.iLateUpdateCheckBox.isSelected) interfaces.add("ILateUpdateSystem")
+                    if (dialog.iLateUpdateCheckBox.isSelected) interfaces.add("ILateUpdate")
                     if (dialog.iDestroyCheckBox.isSelected) interfaces.add("IDestroy")
                     if (dialog.iGetComponentSysCheckBox.isSelected) interfaces.add("IGetComponentSys")
                     if (dialog.iSerializeCheckBox.isSelected) interfaces.add("ISerialize")
                     if (dialog.iDeserializeCheckBox.isSelected) interfaces.add("IDeserialize")
+                    if (dialog.iSerializeToEntityCheckBox.isSelected) interfaces.add("ISerializeToEntity")
                     
                     append("    public class ${if (dialog.entityRadio.isSelected) "$name" else "$name$type"} : Entity")
                     if (interfaces.isNotEmpty()) {
