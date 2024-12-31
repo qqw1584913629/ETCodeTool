@@ -42,9 +42,22 @@ English | [简体中文](README.md)
 1. Right click on project folder
 2. Select New -> ET Code
 3. Configure options in the popup dialog
-   <p align="center"><img src="images/ETCodeCreateEntity.png" alt="CreateEntity"></p>
-   <p align="center"><img src="images/ETCodeCreateSystem.png" alt="CreateSystem"></p>
-   <p align="center"><img src="images/ETCodeCreateHandler.png" alt="CreateHandler"></p>
+   <h3 align="center">Create Entity</h3>
+   <p align="center"><img src="images/CreateEntity1.png" alt="Create Entity Step 1"></p>
+   <p align="center"><img src="images/CreateEntity2.png" alt="Create Entity Step 2"></p>
+   
+   <h3 align="center">Create Component</h3>
+   <p align="center"><img src="images/CreateComponent1.png" alt="Create Component Step 1"></p>
+   <p align="center"><img src="images/CreateComponent2.png" alt="Create Component Step 2"></p>
+   
+   <h3 align="center">Create System</h3>
+   <p align="center"><img src="images/CreateSystem1.png" alt="Create System Step 1"></p>
+   <p align="center"><img src="images/CreateSystem2.png" alt="Create System Step 2"></p>
+   <p align="center"><img src="images/CreateSystem3.png" alt="Create System Step 3"></p>
+   
+   <h3 align="center">Create Message Handler</h3>
+   <p align="center"><img src="images/CreateHandler1.png" alt="Create Message Handler Step 1"></p>
+   <p align="center"><img src="images/CreateHandler2.png" alt="Create Message Handler Step 2"></p>
 4. Click OK to generate code
 
 </details>
