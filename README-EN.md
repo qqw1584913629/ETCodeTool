@@ -66,5 +66,9 @@ English | [简体中文](README.md)
 
 If you have any issues, please [create an Issue](../../issues) 📮
 
+## 📝 Icon Attribution
+
+<a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons">C sharp icons created by Freepik - Flaticon</a>
+
 ---
 *Make code generation simpler, development more efficient!*

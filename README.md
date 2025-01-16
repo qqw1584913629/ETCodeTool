@@ -66,5 +66,9 @@
 
 如有问题，请[提Issue](../../issues) 📮
 
+## 📝 图标来源
+
+<a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons">C sharp icons created by Freepik - Flaticon</a>
+
 ---
 *让代码生成更简单，让开发更高效！*
